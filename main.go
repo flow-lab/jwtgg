@@ -27,6 +27,8 @@ type Config struct {
 	KID string
 	// PrivateKey is the path to the private key used to sign the JWT
 	PrivateKey string
+	// Resource is the resource the client is requesting
+	Resource string
 }
 
 func loadConfig() Config {
@@ -52,6 +54,7 @@ func loadConfig() Config {
 		Endpoint:   utils.MustGetEnv("ENDPOINT"),
 		Issuer:     utils.MustGetEnv("ISS"),
 		Scopes:     utils.EnvOrDefault("SCOPES", ""),
+		Resource:   utils.EnvOrDefault("RESOURCE", ""),
 		KID:        utils.MustGetEnv("KID"),
 		PrivateKey: utils.MustGetEnv("PRIVATE_KEY"),
 	}
@@ -117,6 +120,9 @@ func generateJWT(c *Config) (string, error) {
 	claims["jti"] = uuid.New().String()
 	if c.Scopes != "" {
 		claims["scope"] = c.Scopes
+	}
+	if c.Resource != "" {
+		claims["resource"] = c.Resource
 	}
 
 	key, err := openFile(c.PrivateKey)
