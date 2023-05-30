@@ -30,6 +30,9 @@ This is a test project for generating a JWT token for testing the integration wi
     # install dependencies
     go mod download
 
-    # run the application
+    # run for get token information
     go run main.go
+
+    # run for get token information and vechicle information from the svv api
+    go run main.go -svv
     ```
