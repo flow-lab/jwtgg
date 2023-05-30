@@ -131,16 +131,22 @@ func main() {
 	// test request
 	// API - Tekniske Kjøretøyopplysninger med Eierinformasjon
 	// https://autosys-kjoretoy-api.atlas.vegvesen.no/api-ui/index-tekniske-kjoretoyopplysninger-med-eierinformasjon.html
+
+	// Kjoretoyopplysninger is the request body
 	type Kjoretoyopplysninger struct {
+		// Kjennemerke is the registration number
 		Kjennemerke string `json:"kjennemerke"`
+		// AtDateTime, dtg (dato-tidsgruppe) hvis klienten ønsker informasjon på et gitt tidspunkt.
+		AtDateTime string `json:"dtg"`
 	}
 
 	// test data from https://autosys-kjoretoy-api.atlas.vegvesen.no/kodeverk-ui/index-testdata-sisdinky.html
 	// CU11306, CU11293
 	var reqBody []Kjoretoyopplysninger
-	for _, v := range []string{"CU11306", "CU11293"} {
+	for _, regNr := range []string{"CU11306", "CU11293"} {
 		reqBody = append(reqBody, Kjoretoyopplysninger{
-			Kjennemerke: v,
+			Kjennemerke: regNr,
+			AtDateTime:  time.Now().Format(time.RFC3339),
 		})
 	}
 	body, err := json.Marshal(reqBody)
