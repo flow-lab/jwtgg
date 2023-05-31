@@ -1,8 +1,7 @@
 # jwtgg
 
-This is a test project for generating a JWT token for testing the integration with the [maskinporten](https://samarbeid.digdir.no/maskinporten/maskinporten/25).
-
-
+This is a test project for generating a JWT token for testing the integration with
+the [maskinporten](https://samarbeid.digdir.no/maskinporten/maskinporten/25).
 
 ### Generate a key pair for testing
 
@@ -25,7 +24,7 @@ This is a test project for generating a JWT token for testing the integration wi
     ```
 
 ### Run the application
-    
+
     ```shell
     # install dependencies
     go mod download
@@ -36,3 +35,8 @@ This is a test project for generating a JWT token for testing the integration wi
     # run for get token information and vechicle information from the svv api
     go run main.go -svv
     ```
+
+### Notes
+
+- https://docs.digdir.no/docs/Maskinporten/maskinporten_guide_apikonsument
+- https://docs.digdir.no/docs/Maskinporten/maskinporten_protocol_jwtgrant.html
