@@ -22,5 +22,6 @@ go.work
 
 .env
 *.pem
+jwt.key
 
 .idea/

@@ -5,6 +5,15 @@ the [maskinporten](https://samarbeid.digdir.no/maskinporten/maskinporten/25).
 
 ### Generate a key pair for testing
 
+1. Using [flow cli](https://github.com/flow-lab/flow)
+
+    ```shell
+    # generate a key pair
+    flow crypto genrsa --jwk
+    ```
+
+2. Using the [openssl](https://www.openssl.org/) command line tool
+
     ```shell
     # generate a private key
     openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:2048
