@@ -50,3 +50,4 @@ the [maskinporten](https://samarbeid.digdir.no/maskinporten/maskinporten/25).
 - https://docs.digdir.no/docs/Maskinporten/maskinporten_guide_apikonsument
 - https://docs.digdir.no/docs/Maskinporten/maskinporten_protocol_jwtgrant.html
 - https://docs.digdir.no/docs/Maskinporten/maskinporten_virksomhetssertifikat
+- https://autosys-kjoretoy-api.atlas.vegvesen.no/api-ui/index-tekniske-kjoretoyopplysninger-med-eierinformasjon.html

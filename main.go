@@ -143,7 +143,7 @@ func main() {
 	// test data from https://autosys-kjoretoy-api.atlas.vegvesen.no/kodeverk-ui/index-testdata-sisdinky.html
 	// CU11306, CU11293
 	var reqBody []Kjoretoyopplysninger
-	for _, regNr := range []string{"CU11306", "CU11293"} {
+	for _, regNr := range []string{"CU10149", "CU10150", "CU11193", "CU11293", "CU11295", "CU11296", "CU11297", "CU11298", "CU11299", "CU11300", "CU11301", "CU11302", "CU11304", "CU11305", "CU11306", "CU11307", "CU11308", "CU11309", "EC80287", "YX1382", "YX1383", "YX1384", "YX1385", "YX1444", "YX1445", "YX1480"} {
 		reqBody = append(reqBody, Kjoretoyopplysninger{
 			Kjennemerke: regNr,
 			AtDateTime:  time.Now().Format(time.RFC3339),
