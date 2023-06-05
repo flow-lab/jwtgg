@@ -79,7 +79,7 @@ func main() {
 		AppName:      "jwtgg",
 		Level:        "debug",
 		Version:      "0.1.0",
-		ReportCaller: true,
+		ReportCaller: utils.EnvAsBoolOrDefault("REPORT_CALLER", false),
 		Formatter:    "text",
 	})
 
